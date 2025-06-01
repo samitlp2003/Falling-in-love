@@ -1,0 +1,116 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #ffc0cb, #add8e6, #ffb6c1, #e0ffff);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  padding: 50px 20px 20px;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  background: #fff;
+  color: #ff69b4;
+  padding: 8px 14px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 192, 203, 0.7);
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+  font-size: 22px;
+  color: #fefefe;
+  text-shadow: 1px 1px 5px #f48fb1;
+  animation: fadeIn 2s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0.7; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.05); }
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 30px 40px;
+  min-width: 250px;
+  transition: transform 0.4s, box-shadow 0.4s;
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.6);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 182, 193, 0.9);
+}
+
+.card h2 {
+  font-size: 22px;
+  color: #fff0f5;
+  text-shadow: 1px 1px 5px #000;
+}
+
+footer {
+  padding: 30px 20px;
+  background: transparent;
+}
+
+.director {
+  font-size: 22px;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px #ff69b4;
+  font-weight: bold;
+  animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
